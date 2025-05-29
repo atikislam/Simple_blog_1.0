@@ -1,0 +1,8 @@
+# simple_blog_1.0/.htaccess
+
+RewriteEngine On
+
+# Route requests like /about.php to /pages/about.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.php$ pages/$1.php [L]
